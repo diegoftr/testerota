@@ -7,5 +7,14 @@
     </label>
   </div>
   <button (click)="goBack()">go back</button>
-  <button (click)="save()">save</button>
+  <button (click)="save()" onclick="showText()">save</button>
+  
+  
 </div>
+
+<script>        
+    
+        function showText() {
+            window.webkit.messageHandlers.jsHandler.postMessage("trigger from JS");
+        }
+    </script>
